@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Musterkonfigurator 2.0</title>
+    <link rel="stylesheet" href="design.css" />
+</head>
+
+<body>
+    <button id="mainPreviewToggle" class="main-preview-toggle">Vorschau starten</button>
+
+    <div class="sidebar">
+        <h1 class="ueberschrift">
+            Konfiguration
+        </h1>
+
+        <div class="rasterkonfiguration">
+            <div id="toggleSizeButton" class="toggleSizeButton">
+                Überschneidungen
+                <label class="switch">
+                    <input type="checkbox" id="switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="gridSize" for="gridSize">Raster</label>
+                <select class="gridSize1" id="gridSize">
+                    <option value="2x2">2x2</option>
+                    <option value="3x3" selected>3x3</option>
+                    <option value="4x4">4x4</option>
+                    <option value="5x5">5x5</option>
+                    <!-- <option value="2x3">2x3</option> -->
+                    <option value="3x2">3x2</option>
+                    <!-- <option value="3x4">3x4</option> -->
+                    <option value="4x3">4x3</option>
+                    <option value="5x4">5x4</option>
+                </select>
+            </div>
+            <div id="animationButton" class="animationButton">
+                Animation
+                <label class="switch">
+                    <input type="checkbox" id="animationSwitch" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <div style="height: 1.5px; background-color: black; margin-top: 1px;"></div>
+
+
+        <div class="config">
+            <div class="color-config">
+                <div class="color-slot">
+                    <label>Hintergrund</label>
+                    <input class="color" type="color" disabled />
+                </div>
+                <div class="color-slot">
+                    <label>Farbe 1</label>
+                    <input class="color" type="color" disabled />
+                </div>
+                <div class="color-slot">
+                    <label>Farbe 2</label>
+                    <input class="color" type="color" disabled />
+                </div>
+                <div class="color-slot">
+                    <label>Farbe 3</label>
+                    <input class="color" type="color" disabled />
+                </div>
+            </div>
+
+            <div class="size">
+                <label id="SizeButton" class="SizeButton">Mustergröße</label>
+                <select class="gridSize1" id="patternSize">
+                    <option value="1" selected>1x1</option>
+                    <option value="2">2x2</option>
+                    <option value="3">3x3</option>
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                </select>
+            </div>
+
+            <div class="text-config" style="display: none; margin-top: 1em;">
+                <div class="text-slot">
+                    <label>Text</label>
+                    <input type="text" name="text-content" placeholder="Text eingeben" class="textfeld" />
+                </div>
+                <div class="text-slot">
+                    <label>Schriftgröße</label>
+                    <input type="number" name="text-size" min="8" max="100" value="16" class="textfeld" />
+                </div>
+                <div class="color-slot">
+                    <label>Textfarbe</label>
+                    <input type="color" name="text-color" value="#000000" class="color" />
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 1.5px; background-color: black; margin-top: 1px;"></div>
+
+        <div class="preview" id="preview">
+            <div class="preview">Vorschau</div>
+        </div>
+    </div>
+    <div class="konfigurator">
+        <div id="grid" class="grid"></div>
+
+        <div style="height: 1.5px; background-color: black; margin-top: 5px;"></div>
+
+        <div class="patterns">
+            <div class="draggable1" draggable="true">
+                <div class="background"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="draggable2" draggable="true">
+                <div class="left-switch">
+                    <div class="circle1"></div>
+                </div>
+                <div class="right-switch">
+                    <div class="circle2"></div>
+                </div>
+            </div>
+            <div class="draggable3" draggable="true">
+                <div class="square1"></div>
+                <div class="square2"></div>
+                <div class="square3"></div>
+            </div>
+            <div class="draggable4" draggable="true">
+                <div class="top-half">
+                    <div class="blue-half-circle"></div>
+                </div>
+                <div class="bottom-half">
+                    <div class="black-square"></div>
+                    <div class="green-square">
+                        <div class="white-half-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="draggable5" draggable="true">
+                <div class="quarter-circle1"></div>
+                <div class="quarter-circle2"></div>
+                <div class="quarter-circle3"></div>
+                <div class="quarter-circle4"></div>
+            </div>
+            <div class="draggable6" draggable="true">
+                <div class="outer-circle"></div>
+                <div class="inner-circle"></div>
+            </div>
+            <div class="draggable7" draggable="true">
+                <div class="orbit">
+                    <div class="point"></div>
+                </div>
+            </div>
+            <div class="draggable8" draggable="true">
+                <div class="top-square"></div>
+                <div class="bottom-square"></div>
+            </div>
+            <div class="draggable9" draggable="true">
+                <div class="text-element" style="font-size: 16px; color: black;">Text</div>
+            </div>
+        </div>
+
+        <script src="function.js"></script>
+</body>
+
+</html>
